@@ -1,0 +1,37 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'gather_questions/style.css' %}">
+
+<div class="container card">
+  <img class="icon" src="{% static 'gather_questions/favicons/android-chrome-192x192.png' %}" alt="brand logo"/>
+  
+  <form id="for-question-input" action="{% url 'gather_questions:submit' %}" 
+    method="post" class="container" >
+
+    {% csrf_token %}
+    
+    <label for="qinput">Ask your question</label>
+
+    <input type="text" class="qinput" id="qinput" name="question" 
+      required
+      form="for-question-input"
+      placeholder="Press Enter to submit ..." />
+    
+    <input type="submit" id="submit" value="SUBMIT" class="button primary" />
+  </form>
+
+  {% if question_count %}
+    <div class="bottom-container"> 
+      <form class="inline" action="{% url 'gather_questions:download' %}">
+        <input type="text" class="offset-input" name="offset" placeholder="Offset"/>
+        <input type="submit" class="button download warn" value="DOWNLOAD" />
+      </form>
+      
+      <div class="num-display" >
+        Number of questions: {{ question_count }}
+      </div>
+    </div>
+  {% endif %}
+</div>
+
+<script src="{% static 'gather_questions/main.js' %}"></script>

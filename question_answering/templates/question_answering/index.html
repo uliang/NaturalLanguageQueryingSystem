@@ -1,0 +1,23 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'question_answering/style.css' %}">
+
+<div class="container" >
+  <div class="item form-container" >
+    <form actions="{% url 'question_answering:index' %}" method="get">
+        <div class="question-form" >
+          {{ form.q }}
+          <input type="submit" value="ASK" class="button primary field"/>
+        </div>
+      {{ form.q.errors }}
+    </form>
+  </div>
+  <div class="result item" >
+    <span class="question">
+      {{ question | default_if_none:""}} 
+    </span>
+    <span class="answer">
+      {{ answer | default_if_none:"" }}
+    </span>
+  </div>
+</div>    

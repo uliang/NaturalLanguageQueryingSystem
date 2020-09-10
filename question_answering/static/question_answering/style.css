@@ -1,0 +1,70 @@
+@import url("../../../gather_questions/static/gather_questions/Roboto/Roboto-Regular.ttf");
+
+body {
+    font-family: 'Roboto', sans-serif; 
+}
+
+.button {
+    width: 5rem;
+    border-radius: 5px;
+    color: white;
+}
+
+.primary {
+    background-color: rgb(0, 123, 255);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item {
+    margin:auto; 
+}
+
+.form-container {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.question-form {
+    margin:auto;
+    display: inline;
+}
+
+input[type='text'] {
+    width: 75vw; 
+    padding-left: 1rem;
+}
+
+.result {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.question {
+    margin-bottom:1rem; 
+    font-style: italic;
+}
+
+.answer {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.field {
+    height: 2rem;
+    margin-left: 5px;
+}
+
+.errorlist {
+    list-style-type: none;
+    color: red;
+    padding-left: 20px;
+    font-size: small;
+}

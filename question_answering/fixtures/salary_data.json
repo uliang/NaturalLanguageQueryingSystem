@@ -1,0 +1,272 @@
+[
+{
+  "model": "question_answering.salary",
+  "pk": 1,
+  "fields": {
+    "grade": "TSS 8 / MSS 8",
+    "min_pay": 1239,
+    "max_pay": 2690
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 2,
+  "fields": {
+    "grade": "IPS 1",
+    "min_pay": 1239,
+    "max_pay": 2690
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 3,
+  "fields": {
+    "grade": "TSS 7 / MSS 7",
+    "min_pay": 1614,
+    "max_pay": 2944
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 4,
+  "fields": {
+    "grade": "IPS 2",
+    "min_pay": 1614,
+    "max_pay": 2944
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 5,
+  "fields": {
+    "grade": "TSS 6 / MSS 6",
+    "min_pay": 1811,
+    "max_pay": 3346
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 6,
+  "fields": {
+    "grade": "IPS 3",
+    "min_pay": 1811,
+    "max_pay": 3346
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 7,
+  "fields": {
+    "grade": "TSS 5 / MSS 5",
+    "min_pay": 2548,
+    "max_pay": 4251
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 8,
+  "fields": {
+    "grade": "IPS 4",
+    "min_pay": 2548,
+    "max_pay": 4251
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 9,
+  "fields": {
+    "grade": "TSS 4 / MSS 4",
+    "min_pay": 2800,
+    "max_pay": 5300
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 10,
+  "fields": {
+    "grade": "PAS 6 / PXS 6",
+    "min_pay": 2410,
+    "max_pay": 5200
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 11,
+  "fields": {
+    "grade": "IPS 5",
+    "min_pay": 2800,
+    "max_pay": 5300
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 12,
+  "fields": {
+    "grade": "TSS 3 / MSS 3",
+    "min_pay": 4240,
+    "max_pay": 5870
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 13,
+  "fields": {
+    "grade": "IPS 6",
+    "min_pay": 4240,
+    "max_pay": 5870
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 14,
+  "fields": {
+    "grade": "PAS 5 / PXS 5",
+    "min_pay": 3750,
+    "max_pay": 6740
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 15,
+  "fields": {
+    "grade": "IPS 6H",
+    "min_pay": 3750,
+    "max_pay": 6740
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 16,
+  "fields": {
+    "grade": "TSS 2 / MSS 2",
+    "min_pay": 4900,
+    "max_pay": 6800
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 17,
+  "fields": {
+    "grade": "TSS 1 / MSS 1",
+    "min_pay": 5660,
+    "max_pay": 7800
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 18,
+  "fields": {
+    "grade": "IPS 7",
+    "min_pay": 4900,
+    "max_pay": 6800
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 19,
+  "fields": {
+    "grade": "PAS 4 / PXS 4",
+    "min_pay": 5120,
+    "max_pay": 8980
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 20,
+  "fields": {
+    "grade": "IPS 8",
+    "min_pay": 5660,
+    "max_pay": 7800
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 21,
+  "fields": {
+    "grade": "IPS 8H",
+    "min_pay": 5120,
+    "max_pay": 8980
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 22,
+  "fields": {
+    "grade": "IPS 9",
+    "min_pay": 6450,
+    "max_pay": 9060
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 23,
+  "fields": {
+    "grade": "PAS 3 / PXS 3",
+    "min_pay": 7060,
+    "max_pay": 10980
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 24,
+  "fields": {
+    "grade": "PAS 2 / PXS 2",
+    "min_pay": 10920,
+    "max_pay": 16900
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 25,
+  "fields": {
+    "grade": "IPS 10",
+    "min_pay": 7470,
+    "max_pay": 10085
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 26,
+  "fields": {
+    "grade": "IPS 10H",
+    "min_pay": 7060,
+    "max_pay": 10980
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 27,
+  "fields": {
+    "grade": "IPS 11",
+    "min_pay": 8330,
+    "max_pay": 11660
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 28,
+  "fields": {
+    "grade": "IPS 12",
+    "min_pay": 11320,
+    "max_pay": 15282
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 29,
+  "fields": {
+    "grade": "IPS 12H",
+    "min_pay": 10920,
+    "max_pay": 16900
+  }
+},
+{
+  "model": "question_answering.salary",
+  "pk": 30,
+  "fields": {
+    "grade": "IPS 13",
+    "min_pay": 12500,
+    "max_pay": 17510
+  }
+}
+]
