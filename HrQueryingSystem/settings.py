@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
 SECRET_KEY = 'xywkl=3^9hyz&t^2m9=2lk77&5*dth29l58^lii0929sy=g=8^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['.azurewebsites.net']
 
 
 # Application definition
@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'HrQueryingSystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'questionnanswering',
-        'USER': 'uliang', 
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'hr_questions',
+        'USER': 'uliang@uliangs-django', 
         'PASSWORD': '-56_6icISJI', 
-        'HOST': '127.0.0.1', 
-        'PORT': '3306'
+        'HOST': 'uliangs-django.postgres.database.azure.com', 
+        'PORT': '5432'
     }
 }
 
