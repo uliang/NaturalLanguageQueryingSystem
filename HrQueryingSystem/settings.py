@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'hr_questions',
         'USER': 'uliang@uliangs-django', 
-        'PASSWORD': '-56_6icISJI', 
+        'PASSWORD': '56_6icISJI', 
         'HOST': 'uliangs-django.postgres.database.azure.com', 
         'PORT': '5432'
     }
