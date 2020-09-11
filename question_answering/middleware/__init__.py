@@ -14,12 +14,9 @@ from .monad import (State, ValidateForm, ExtractFormData, ApplyNlp,
 
 
 class NlpMiddleware: 
-    
-    try: 
-        nlp = spacy.load('en_hr_questions')
-    except OSError: 
-        nlp = None 
-        
+
+    nlp = spacy.load('en_hr_questions')
+
     def __init__(self, get_response) : 
         self.get_reponse = get_response 
 
