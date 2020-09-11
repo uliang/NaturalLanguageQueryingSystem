@@ -94,7 +94,7 @@ class ApplyNlp:
     data_field:str = attr.ib()
 
     def __call__(self, env:Environment) -> State : 
-        with suppress(KeyError) : 
+        with suppress(KeyError, TypeError) : 
             doc = self.nlp(env[self.data_field])
             return State(env) | update({
                 'qtype': doc._.qtype, 

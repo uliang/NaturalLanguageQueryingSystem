@@ -13,11 +13,15 @@ from .monad import (State, ValidateForm, ExtractFormData, ApplyNlp,
                     FindAnswer, States)
 
 
-@attr.s(auto_attribs=True)
 class NlpMiddleware: 
     
-    nlp: typ.ClassVar = spacy.load('en_hr_questions')
-    get_response:typ.Callable
+    try: 
+        nlp = spacy.load('en_hr_questions')
+    except OSError: 
+        nlp = None 
+        
+    def __init__(self, get_response) : 
+        self.get_reponse = get_response 
 
     def __call__(self, request) : 
         request.context = State({ 'form': QuestionForm(request.GET) }) \
