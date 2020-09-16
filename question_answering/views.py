@@ -7,10 +7,12 @@ from .forms import QuestionForm
 
 def index(request) :
     form = QuestionForm()
+    # print(request.context)
+    payload, state = request.context 
     context = { 
         'form': form, 
-        'answer': request.context.get('message'), 
-        'question': request.context.get('q')
+        'answer': payload, 
+        'question': state.get('q', None)
     }
 
     return TemplateResponse(request, 'question_answering/index.html', context=context)
