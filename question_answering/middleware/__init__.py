@@ -21,6 +21,8 @@ class NlpMiddleware:
    
     def process_template_response(self, request, response) : 
         payload, state = request.context
+        
         if state['status'] is Status.INVALID : 
             response.context_data.update(dict(form=payload))
+        
         return response
