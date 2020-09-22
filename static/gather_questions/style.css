@@ -1,0 +1,104 @@
+@import url("Roboto/Roboto-Regular.ttf");
+
+:root {
+    --primary-bg-color:rgb(0, 145, 255);
+    --content-width: 300px; 
+    --warn-bg-color: rgb(255, 0, 89); 
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+}
+
+div.container {
+    margin:auto; 
+}
+
+.icon {
+    margin:auto; 
+    margin-top: 2rem;
+    width: 96px;
+    height: 96px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+form.container {
+    align-items: stretch;
+}
+
+form.container > * {
+    margin:10px; 
+}
+
+.qinput {
+    width: inherit;
+    border-color: rgb(211, 211, 211);
+    height: 2rem;
+    border: 1px solid lightslategray; 
+    padding-left: 1rem; 
+}
+
+label {
+    color: rgb(61, 66, 72);
+    text-align: center;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+
+input.button {
+    color: white; 
+    border-radius: 5px;
+    height: 2rem;
+}
+
+.download {
+    width: auto; 
+    margin-left: 8.5px;
+}
+
+.primary {
+    background-color: var(--primary-bg-color);
+}
+
+.warn {
+    background-color: var(--warn-bg-color);
+}
+
+.num-display {
+    color: darkgray;
+    font-size: smaller;
+    margin-right: 8.5px;
+}
+
+.card {
+    border: 1px solid lightslategray; 
+    width:65%;
+    padding: 0.5rem; 
+    border-radius: 5px;
+}
+
+.inline {
+    display: inline;
+}
+
+.offset-input {
+    height: 2rem;
+    margin-left: 8.5px;
+    padding-left: 1rem;
+}
