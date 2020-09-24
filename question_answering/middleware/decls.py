@@ -45,7 +45,7 @@ chain = [
             'status': Status.PROCESSING if t.is_valid() else Status.INVALID, 
             'form': t 
         })), 
-    
+    #[BUG] form remains in payload, so is the value at the context key 'answer' 
     DoWhen(processing)(lambda t, s: (model(t.cleaned_data['q']), {
             **s, 
             'q': t.cleaned_data['q']

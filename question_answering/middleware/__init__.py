@@ -23,6 +23,6 @@ class NlpMiddleware:
         payload, state = request.context
         
         if state['status'] is Status.INVALID : 
-            response.context_data.update(dict(form=payload))
+            response.context_data.update(dict(form=payload, answer=None))
         
         return response

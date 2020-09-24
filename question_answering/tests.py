@@ -52,3 +52,7 @@ class TestQuestionAnsweringView(TestCase) :
         self.assertNotContains(response, "None")
         self.assertNotContains(response, "Sorry, I do not understand this question.")
         self.assertContains(response, "This field is required")
+
+    def test_error_messages_are_not_duplicated_in_response(self) : 
+        response = self.client.get(reverse("question_answering:index"), data={'q': ''})
+        self.assertContains(response, "This field is required", count=1)
