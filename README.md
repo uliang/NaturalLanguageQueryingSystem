@@ -33,7 +33,7 @@ To develop such a question and answering model, one might need to quickly genera
 
 This application exposes the `/gather` endpoint to enable model developers to quickly create a dataset of questions that might be asked in a domain. 
 
-The collection of questions are saved and can be downloaded into spaCy `.jsonl` format. 
+The collection of questions are saved and can be downloaded into spaCy `.jsonl` format. Data can be then annotated and trained to build up the custom model. 
 
 ## The main interface 
 
