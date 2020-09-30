@@ -126,3 +126,6 @@ USE_TZ = True
 
 STATIC_URL = os.environ.get('STATIC_URL', '/static')
 STATIC_ROOT = './static'
+
+# Spacy language model name 
+LANG_MODEL = 'en_hr_questions'
