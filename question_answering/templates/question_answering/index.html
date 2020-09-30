@@ -2,6 +2,10 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'question_answering/style.css' %}">
 
+<nav >
+  <h3 class="brand">Smart Querying System</h3>
+</nav>
+
 <div class="container" >
   <div class="item form-container" >
     <form actions="{% url 'question_answering:index' %}" method="get">
@@ -18,6 +22,9 @@
     </span>
     <span class="answer">
       {{ answer | default_if_none:"" }}
+    </span>
+    <span class="answer">
+      {{ error | default_if_none:"" }}
     </span>
   </div>
 </div>    
