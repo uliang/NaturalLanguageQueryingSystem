@@ -40,4 +40,3 @@ typing-inspect==0.6.0
 urllib3==1.25.10
 wasabi==0.8.0
 ./dist/parsers-0.0.2.tar.gz
-https://uliangstorage.z23.web.core.windows.net/en_hr_questions-0.0.2.tar.gz
