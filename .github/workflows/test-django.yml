@@ -15,7 +15,7 @@ jobs:
         image: postgres
         env:
           POSTGRES_PASSWORD: b00tleg
-          POSTGRES_USER: admin
+          POSTGRES_USER: mydb
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
