@@ -1,4 +1,4 @@
-![Django CI](https://github.com/uliang/NaturalLanguageQueryingSystem/workflows/Django%20CI/badge.svg) ![Python 3.8](https://img.shields.io/badge/python-3.8-blue)
+![Django CI](https://github.com/uliang/NaturalLanguageQueryingSystem/workflows/Django%20CI/badge.svg) ![Python](https://img.shields.io/badge/Python-3.6%7C3.7%7C3.8-blu)
 
 # Question and Answering application
 
