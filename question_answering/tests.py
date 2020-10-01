@@ -69,19 +69,11 @@ class TestQuestionAnsweringSadPath(TestCase) :
             
             self.assertContains(response, "Data not found")
 
-@override_settings(LANG_MODEL='none')
-class TestNoModel(TestCase): 
-    """
-    This test case works only in isolation due to the fact that the language model
-    needs to be initialized only once. This means once the model must be loaded 
-    once for all requests and thus overriding the LANG_MODEL settings will not work 
-    if this test is run with other tests.  
-    """
-    fixtures = ['test_salary_data.json']
-
-    @unittest.expectedFailure
     def test_that_if_no_lang_model_loaded_message_is_shown(self): 
-        response = self.client.get(reverse("question_answering:index"), 
-                                data={"q": "What is the pay range for a GRADE 1 staff?"})
-    
-        self.assertContains(response, "No model loaded")
+        with patch('question_answering.middleware.nlp', 
+            side_effect=NotImplementedError("No model loaded")):
+            
+            response = self.client.get(reverse("question_answering:index"), 
+                                    data={"q": "What is the pay range for a GRADE 1 staff?"})
+        
+            self.assertContains(response, "No model loaded")

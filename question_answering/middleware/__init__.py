@@ -8,9 +8,9 @@ import spacy
 from .service import Service
 from .states import states
 from .loaders import table_loader
+from .language_model import nlp
 from ..forms import QuestionForm
 
-from question_answering.middleware.language_model import nlp
 
 @attr.s
 class NlpMiddleware: 
