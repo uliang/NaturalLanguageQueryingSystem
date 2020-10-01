@@ -79,13 +79,13 @@ WSGI_APPLICATION = 'HrQueryingSystem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', None),
+        'NAME': os.environ.get('DB_NAME', ''),
         'USER': os.environ.get('DB_USER', None), 
         'PASSWORD': os.environ.get('DB_PASSWORD', None), 
         'HOST': os.environ.get('DB_HOST', None), 
-        'PORT': os.environ.get('DB_PORT', 5432), 
+        'PORT': os.environ.get('DB_PORT', '5432'), 
         'TEST': {
-            'NAME': os.environ.get('DB_NAME', None)
+            'NAME': os.environ.get('DB_NAME', '')
         }
     }
 }
