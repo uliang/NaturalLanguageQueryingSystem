@@ -1,0 +1,54 @@
+name: Django CI
+
+on:
+  push:
+    branches: [ production ]
+  pull_request:
+    branches: [ production ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    services:
+      postgres: 
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: b00tleg
+          POSTGRES_USER: admin
+          POSTGRES_DB: default
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+            
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v2
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: Set Environment Variables
+      env:
+        DB_HOST: postgres
+        DB_NAME: default
+        DB_USER: admin
+        DB_PASSWORD: b00tleg
+    - name: Migrations
+      run: |
+        python manage.py migrate
+    - name: Run Tests
+      run: |
+        python manage.py test
