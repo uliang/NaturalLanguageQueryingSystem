@@ -2,3 +2,5 @@
 __pycache__
 .DS_Store
 en_hr_questions-0.0.2.tar.gz
+*.db.sqlite3
+db.sqlite3

@@ -4,6 +4,10 @@ from django.conf import settings
 
 # Initialize language model 
 try: 
-    nlp = spacy.load(settings.LANG_MODEL)
+    if settings.LANG_MODEL != 'none':   
+        nlp = spacy.load(settings.LANG_MODEL)
+    else:
+        raise ImportError
 except(ImportError, OSError) : 
-    nlp = None
+    def nlp(text):
+        raise NotImplementedError
