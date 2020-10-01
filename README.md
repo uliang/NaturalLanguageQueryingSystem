@@ -1,3 +1,5 @@
+![Django CI](https://github.com/uliang/NaturalLanguageQueryingSystem/workflows/Django%20CI/badge.svg) ![Python 3.8](https://img.shields.io/badge/python-3.8-blue)
+
 # Question and Answering application
 
 ## Introduction 
