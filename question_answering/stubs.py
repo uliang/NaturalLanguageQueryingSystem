@@ -10,4 +10,4 @@ class FakeDoc:
         self.text = text 
 
     def __str__(self): 
-        return self.text 
+        return f"<[MOCKED NLP]{self.text}>"

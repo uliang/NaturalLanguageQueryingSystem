@@ -9,27 +9,31 @@ from .stubs import FakeDoc
 # Create your tests here.
 
 
-class TestQuestionAnsweringView(TestCase) : 
+class TestQuestionAnsweringHappyPath(TestCase):
     fixtures = ['test_salary_data.json']
-
+    
     def setUp(self): 
-        patcher = patch('question_answering.middleware.language_model.nlp')
+        self.test_question = "What is the pay range for a GRADE 1 staff?"
+        patcher = patch('question_answering.middleware.nlp',
+             return_value=FakeDoc(self.test_question, 'Salary', 'GRADE 1'))
         self.FakeNlp = patcher.start()
         self.addCleanup(patcher.stop)
+
+    def test_index_page_renders_answer_to_payroll_question(self):
+        response = self.client.get(reverse("question_answering:index"), 
+                                   data={"q": self.test_question})
+
+        self.FakeNlp.assert_called_with(self.test_question)
+        self.assertContains(response, "$10 to $20" )    
+        self.assertContains(response, "What is the pay range for a GRADE 1 staff?")                               
+
+class TestQuestionAnsweringSadPath(TestCase) : 
+    fixtures = ['test_salary_data.json']
 
     def test_index_page_no_question_received(self) : 
         response = self.client.get(reverse("question_answering:index"), data={"q": '42' })
         self.assertContains(response, "Ensure this value has at least 5 characters (it has 2).") 
     
-    def test_index_page_renders_answer_to_payroll_question(self):
-        test_question = "What is the pay range for a GRADE 1 staff?"
-        self.FakeNlp = MagicMock(return_value=FakeDoc(test_question, 'Salary', 'GRADE 1'))
-        
-        response = self.client.get(reverse("question_answering:index"), 
-                                   data={"q": test_question})
-        
-        self.assertContains(response, "$10 to $20" )    
-        self.assertContains(response, "What is the pay range for a GRADE 1 staff?")                               
 
     # @unittest.skip("")
     def test_index_page_responds_with_an_ask_again_message_to_an_unrecognized_question(self) :

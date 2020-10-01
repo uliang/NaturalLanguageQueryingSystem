@@ -78,12 +78,8 @@ WSGI_APPLICATION = 'HrQueryingSystem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME', None),
-        'USER': os.environ.get('DB_USER', None), 
-        'PASSWORD': os.environ.get('DB_PASSWORD', None), 
-        'HOST': os.environ.get('DB_HOST', None), 
-        'PORT': os.environ.get('DB_PORT', None)
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'db.sqlite3',
     }
 }
 
@@ -124,7 +120,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-STATIC_URL = os.environ.get('STATIC_URL', '/static')
+STATIC_URL = os.environ.get('STATIC_URL', '/static/')
 STATIC_ROOT = './static'
 
 # Spacy language model name 

@@ -60,8 +60,8 @@ class _ServiceMeta(type):
 
 @attr.s
 class Service(metaclass=_ServiceMeta, 
-              logging_enabled=False, 
-              log_methods=["maybe"]): 
+              logging_enabled=True, 
+              log_methods=["bind"]): 
    
     _skip_if_error_ = [
         'maybe', 'map_', 'filter_', 'assign',
