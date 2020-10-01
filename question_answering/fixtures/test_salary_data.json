@@ -1,0 +1,11 @@
+[
+{
+  "model": "question_answering.salary",
+  "pk": 1,
+  "fields": {
+    "grade": "GRADE 1",
+    "min_pay": 10,
+    "max_pay": 20
+  }
+}
+]
