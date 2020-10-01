@@ -16,7 +16,6 @@ jobs:
         env:
           POSTGRES_PASSWORD: b00tleg
           POSTGRES_USER: admin
-          POSTGRES_DB: default
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -43,7 +42,7 @@ jobs:
     - name: Migrations
       env:
         DB_HOST: localhost
-        DB_NAME: default
+        DB_NAME: admin
         DB_USER: admin
         DB_PASSWORD: b00tleg
       run: |
