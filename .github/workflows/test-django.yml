@@ -42,7 +42,7 @@ jobs:
         pip install -r requirements.txt
     - name: Migrations
       env:
-        DB_HOST: postgres
+        DB_HOST: localhost
         DB_NAME: default
         DB_USER: admin
         DB_PASSWORD: b00tleg
