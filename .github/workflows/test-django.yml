@@ -40,13 +40,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Set Environment Variables
+    - name: Migrations
       env:
         DB_HOST: postgres
         DB_NAME: default
         DB_USER: admin
         DB_PASSWORD: b00tleg
-    - name: Migrations
       run: |
         python manage.py migrate
     - name: Run Tests
